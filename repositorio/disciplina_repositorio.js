@@ -13,12 +13,7 @@ class DisciplinaRepositorio {
     }
 
     atualizar(codigo, novoNome) {
-        const codigoDisciplinaAAtualizar = this.disciplinas.findIndex(
-            (disciplina) => {
-                disciplina.codigo === codigo;
-            }
-        )
-
+        const codigoDisciplinaAAtualizar = this.disciplinas.findIndex(disciplina => disciplina.codigo === codigo);
         if(codigoDisciplinaAAtualizar > -1) {
             this.disciplinas[codigoDisciplinaAAtualizar].nome = novoNome;
         }

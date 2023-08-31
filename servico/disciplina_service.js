@@ -11,16 +11,13 @@ class DisciplinaService {
         } 
 
         const disciplina = new Disciplina(codigo, nome);
-
         this.repositorio.inserir(disciplina);
-
         return disciplina;
     }
 
     pesquisarPorCodigo(codigo) {
-        return this.repositorio
-            .listar()
-            .filter((disciplina) => disciplina.codigo === codigo);
+        return this.repositorio.listar().filter(
+            (disciplina) => disciplina.codigo === codigo);
     }
 
     inserirAlunoNaDisciplina(codigo, aluno) {
