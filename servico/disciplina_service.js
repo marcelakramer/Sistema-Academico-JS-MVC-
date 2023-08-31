@@ -30,7 +30,7 @@ class DisciplinaService {
             throw new Error('Disciplina não encontrada!');
         }
 
-        disciplina[0].adicionar(aluno);
+        disciplina[0].alunos.push(aluno);
     }
 
     atualizar(codigo, novoNome) {
